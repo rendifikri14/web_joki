@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SkripsiPro Admin — Panel administrasi untuk mengelola order joki skripsi, klien, dan laporan.">
+  <title>SkripsiPro Admin — Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- ===== Login Page ===== -->
+  <div class="login-page" id="loginPage">
+    <div class="login-bg-orb login-bg-orb--1"></div>
+    <div class="login-bg-orb login-bg-orb--2"></div>
+
+    <div class="login-card">
+      <div class="logo">
+        <div class="logo-icon">📝</div>
+        <h2>Skripsi<span>Pro</span></h2>
+        <p>Admin Dashboard</p>
+      </div>
+      <div class="login-error" id="loginError">Username atau password salah!</div>
+      <form class="login-form" id="loginForm" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label for="loginUsername">Username</label>
+          <input type="text" id="loginUsername" placeholder="Masukkan username" value="admin">
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Masukkan password" value="admin123">
+        </div>
+        <button type="submit" class="btn-login">Masuk ke Dashboard</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== Admin Panel ===== -->
+  <div class="admin-layout" id="adminPanel" style="display:none;">
+    
+    <!-- Mobile Toggle -->
+    <button class="mobile-toggle" id="mobileToggle" onclick="toggleSidebar()">☰</button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo-icon">📝</div>
+        <h3>Skripsi<span>Pro</span></h3>
+      </div>
+
+      <div class="sidebar-label">Menu Utama</div>
+      <nav class="sidebar-nav">
+        <a href="#" class="active" data-page="dashboard" onclick="switchPage('dashboard', this)">
+          <span class="nav-icon">📊</span> Dashboard
+        </a>
+        <a href="#" data-page="orders" onclick="switchPage('orders', this)">
+          <span class="nav-icon">📋</span> Daftar Order
+          <span class="badge" id="orderBadge">12</span>
+        </a>
+        <a href="#" data-page="clients" onclick="switchPage('clients', this)">
+          <span class="nav-icon">👥</span> Data Klien
+        </a>
+      </nav>
+
+      <div class="sidebar-label">Lainnya</div>
+      <nav class="sidebar-nav">
+        <a href="#" data-page="settings" onclick="switchPage('settings', this)">
+          <span class="nav-icon">⚙️</span> Pengaturan
+        </a>
+        <a href="#" onclick="handleLogout()">
+          <span class="nav-icon">🚪</span> Keluar
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="avatar">AD</div>
+          <div class="user-info">
+            <h4>Admin</h4>
+            <p>Super Admin</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- ======== DASHBOARD PAGE ======== -->
+      <div class="page-section active" id="page-dashboard">
+        <div class="topbar">
+          <div class="topbar-left">
+            <h1>Dashboard</h1>
+            <p>Selamat datang kembali, Admin! 👋</p>
+          </div>
+          <div class="topbar-right">
+            <div class="topbar-search">
+              <span class="search-icon">🔍</span>
+              <input type="text" placeholder="Cari order, klien, atau kampus..." id="dashSearch" oninput="handleDashSearch(this.value)">
+            </div>
+            <div style="position:relative;">
+              <button class="topbar-btn" id="btnAdminNotif" onclick="toggleAdminNotif()" title="Lihat Notifikasi">
+                🔔
+                <span class="notif-dot"></span>
+              </button>
+              <div class="notif-dropdown" id="adminNotifDropdown">
+                <div class="notif-header">
+                  <h4>🔔 Pemberitahuan</h4>
+                  <span style="font-size:0.75rem; color:var(--primary-light); cursor:pointer;" onclick="toggleAdminNotif()">Tutup</span>
+                </div>
+                <div class="notif-item">
+                  <span>🚀</span>
+                  <div>
+                    <strong>Order Baru Masuk:</strong> SK-2026-1848 oleh Rian Pratama
+                    <div style="font-size:0.7rem; color:var(--text-muted); margin-top:2px;">5 menit lalu</div>
+                  </div>
+                </div>
+                <div class="notif-item">
+                  <span>💬</span>
+                  <div>
+                    <strong>Revisi Selesai:</strong> Bab 4 Klien #SK-1847 siap dikirim
+                    <div style="font-size:0.7rem; color:var(--text-muted); margin-top:2px;">20 menit lalu</div>
+                  </div>
+                </div>
+                <div class="notif-item">
+                  <span>✅</span>
+                  <div>
+                    <strong>Pembayaran Masuk:</strong> DP 50% Paket Pro telah diverifikasi
+                    <div style="font-size:0.7rem; color:var(--text-muted); margin-top:2px;">1 jam lalu</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon purple">📋</div>
+            <div class="stat-value" id="statOrders">156</div>
+            <div class="stat-label">Total Order</div>
+            <div class="stat-change up">+12%</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon green">✅</div>
+            <div class="stat-value" id="statDone">128</div>
+            <div class="stat-label">Selesai</div>
+            <div class="stat-change up">+8%</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon yellow">⏳</div>
+            <div class="stat-value" id="statProgress">23</div>
+            <div class="stat-label">Dalam Proses</div>
+            <div class="stat-change down">-3%</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon blue">💰</div>
+            <div class="stat-value" id="statRevenue">Rp 245Jt</div>
+            <div class="stat-label">Pendapatan Bulan Ini</div>
+            <div class="stat-change up">+18%</div>
+          </div>
+        </div>
+
+        <!-- Charts + Activity -->
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-header">
+              <h3>📈 Order Bulanan</h3>
+              <div class="card-actions">
+                <button class="btn-sm outline" id="chartBtn6" onclick="setChartRange(6)">6 Bulan</button>
+                <button class="btn-sm primary" id="chartBtn12" onclick="setChartRange(12)">12 Bulan</button>
+              </div>
+            </div>
+            <div class="chart-area">
+              <div class="chart-bars" id="chartBars">
+                <!-- Filled by JS -->
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3>🕐 Aktivitas Terbaru</h3>
+            </div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-dot green"></div>
+                <div>
+                  <div class="activity-text"><strong>Order #SK-1847</strong> telah selesai dan dikirim ke klien.</div>
+                  <div class="activity-time">2 menit lalu</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot purple"></div>
+                <div>
+                  <div class="activity-text">Order baru masuk dari <strong>Rizky Pratama</strong> — Skripsi Manajemen</div>
+                  <div class="activity-time">15 menit lalu</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot yellow"></div>
+                <div>
+                  <div class="activity-text"><strong>Order #SK-1845</strong> menunggu review dari klien.</div>
+                  <div class="activity-time">1 jam lalu</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot blue"></div>
+                <div>
+                  <div class="activity-text">Pembayaran DP diterima untuk <strong>Order #SK-1846</strong></div>
+                  <div class="activity-time">2 jam lalu</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot green"></div>
+                <div>
+                  <div class="activity-text"><strong>Penulis Baru</strong> — Dewi Lestari bergabung sebagai penulis Hukum.</div>
+                  <div class="activity-time">3 jam lalu</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Orders -->
+        <div class="card">
+          <div class="card-header">
+            <h3>📋 Order Terbaru</h3>
+            <div class="card-actions">
+              <button class="btn-sm primary" onclick="switchPage('orders', document.querySelector('[data-page=orders]'))">Lihat Semua</button>
+            </div>
+          </div>
+          <div style="overflow-x: auto;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Klien</th>
+                  <th>Layanan</th>
+                  <th>Status</th>
+                  <th>Deadline</th>
+                  <th>Harga</th>
+                </tr>
+              </thead>
+              <tbody id="recentOrdersBody">
+                <!-- Filled by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======== ORDERS PAGE ======== -->
+      <div class="page-section" id="page-orders">
+        <div class="topbar">
+          <div class="topbar-left">
+            <h1>Daftar Order</h1>
+            <p>Kelola semua pesanan klien</p>
+          </div>
+          <div class="topbar-right">
+            <div class="topbar-search">
+              <span class="search-icon">🔍</span>
+              <input type="text" placeholder="Cari order..." id="orderSearch" oninput="filterOrders(this.value)">
+            </div>
+            <button class="btn-sm primary" onclick="openAdminModal('add')">+ Tambah Order</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="filter-tabs">
+            <button class="filter-tab active" onclick="filterOrderStatus('all', this)">Semua</button>
+            <button class="filter-tab" onclick="filterOrderStatus('pending', this)">Menunggu</button>
+            <button class="filter-tab" onclick="filterOrderStatus('progress', this)">Dalam Proses</button>
+            <button class="filter-tab" onclick="filterOrderStatus('review', this)">Review</button>
+            <button class="filter-tab" onclick="filterOrderStatus('done', this)">Selesai</button>
+            <button class="filter-tab" onclick="filterOrderStatus('cancelled', this)">Batal</button>
+          </div>
+          <div style="overflow-x: auto;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Klien</th>
+                  <th>Layanan</th>
+                  <th>Status</th>
+                  <th>Prioritas</th>
+                  <th>Deadline</th>
+                  <th>Harga</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="ordersTableBody">
+                <!-- Filled by JS -->
+              </tbody>
+            </table>
+          </div>
+          <div class="table-footer">
+            <div class="table-info" id="orderTableInfo">Menampilkan 1-10 dari 12 order</div>
+            <div class="pagination" id="orderPagination">
+              <!-- Filled by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======== CLIENTS PAGE ======== -->
+      <div class="page-section" id="page-clients">
+        <div class="topbar">
+          <div class="topbar-left">
+            <h1>Data Klien</h1>
+            <p>Kelola informasi klien</p>
+          </div>
+          <div class="topbar-right">
+            <div class="topbar-search">
+              <span class="search-icon">🔍</span>
+              <input type="text" placeholder="Cari klien..." id="clientSearch" oninput="filterClients(this.value)">
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid" style="margin-bottom:20px;">
+          <div class="stat-card">
+            <div class="stat-icon purple">👥</div>
+            <div class="stat-value" id="totalClients">0</div>
+            <div class="stat-label">Total Klien</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon green">🔄</div>
+            <div class="stat-value" id="repeatClients">0</div>
+            <div class="stat-label">Klien Berulang</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon blue">🏫</div>
+            <div class="stat-value" id="totalUniv">0</div>
+            <div class="stat-label">Universitas</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>👥 Daftar Klien</h3>
+          </div>
+          <div style="overflow-x: auto;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Klien</th>
+                  <th>WhatsApp</th>
+                  <th>Jurusan</th>
+                  <th>Total Order</th>
+                  <th>Total Bayar</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="clientsTableBody">
+                <!-- Filled by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======== SETTINGS PAGE ======== -->
+      <div class="page-section" id="page-settings">
+        <div class="topbar">
+          <div class="topbar-left">
+            <h1>Pengaturan</h1>
+            <p>Konfigurasi admin panel</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card" style="padding: 28px;">
+            <h3 style="margin-bottom: 20px; font-size: 1.05rem;">🔐 Ubah Password</h3>
+            <form onsubmit="changePassword(event)">
+              <div class="form-group" style="margin-bottom:14px;">
+                <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Password Lama</label>
+                <input type="password" id="oldPassword" placeholder="Masukkan password lama" style="width:100%;padding:10px 14px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-xs);color:var(--text-primary);font-family:var(--font);font-size:0.85rem;outline:none;">
+              </div>
+              <div class="form-group" style="margin-bottom:14px;">
+                <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Password Baru</label>
+                <input type="password" id="newPassword" placeholder="Masukkan password baru" style="width:100%;padding:10px 14px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-xs);color:var(--text-primary);font-family:var(--font);font-size:0.85rem;outline:none;">
+              </div>
+              <button type="submit" class="btn-sm primary" style="padding:10px 24px;margin-top:8px;">Simpan Password</button>
+            </form>
+          </div>
+          <div class="card" style="padding: 28px;">
+            <h3 style="margin-bottom: 20px; font-size: 1.05rem;">📱 Nomor WhatsApp Bisnis</h3>
+            <form onsubmit="saveWhatsApp(event)">
+              <div class="form-group" style="margin-bottom:14px;">
+                <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Nomor WhatsApp</label>
+                <input type="tel" id="waNumber" value="+62 812-3456-7890" style="width:100%;padding:10px 14px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-xs);color:var(--text-primary);font-family:var(--font);font-size:0.85rem;outline:none;">
+              </div>
+              <div class="form-group" style="margin-bottom:14px;">
+                <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Template Pesan Auto-Reply</label>
+                <textarea id="waTemplate" rows="3" style="width:100%;padding:10px 14px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-xs);color:var(--text-primary);font-family:var(--font);font-size:0.85rem;outline:none;resize:vertical;">Halo! Terima kasih sudah menghubungi SkripsiPro. Tim kami akan segera merespons.</textarea>
+              </div>
+              <button type="submit" class="btn-sm primary" style="padding:10px 24px;margin-top:8px;">Simpan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ===== Admin Modal (Add/Edit Order) ===== -->
+  <div class="admin-modal-overlay" id="adminModal">
+    <div class="admin-modal">
+      <div class="modal-header">
+        <h3 id="adminModalTitle">Tambah Order Baru</h3>
+        <button class="modal-close-btn" onclick="closeAdminModal()">&times;</button>
+      </div>
+      <form class="admin-form" id="adminOrderForm" onsubmit="saveOrder(event)">
+        <input type="hidden" id="editOrderId">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="aClientName">Nama Klien *</label>
+            <input type="text" id="aClientName" placeholder="Nama lengkap" required>
+          </div>
+          <div class="form-group">
+            <label for="aClientPhone">WhatsApp *</label>
+            <input type="tel" id="aClientPhone" placeholder="0812xxxxxxxx" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="aClientUniv">Universitas *</label>
+            <input type="text" id="aClientUniv" placeholder="Nama universitas" required>
+          </div>
+          <div class="form-group">
+            <label for="aClientJurusan">Jurusan *</label>
+            <input type="text" id="aClientJurusan" placeholder="Program studi" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="aService">Layanan *</label>
+            <select id="aService" required>
+              <option value="Skripsi">Joki Skripsi</option>
+              <option value="Tesis">Joki Tesis</option>
+              <option value="Makalah">Joki Makalah</option>
+              <option value="Olah Data">Olah Data</option>
+              <option value="Jurnal">Jurnal Ilmiah</option>
+              <option value="Coding">Joki Coding</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="aStatus">Status *</label>
+            <select id="aStatus" required>
+              <option value="pending">Menunggu</option>
+              <option value="progress">Dalam Proses</option>
+              <option value="review">Review</option>
+              <option value="done">Selesai</option>
+              <option value="cancelled">Batal</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="aPriority">Prioritas</label>
+            <select id="aPriority">
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="aDeadline">Deadline *</label>
+            <input type="date" id="aDeadline" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="aPrice">Harga (Rp) *</label>
+          <input type="number" id="aPrice" placeholder="2500000" required>
+        </div>
+        <div class="form-group">
+          <label for="aNotes">Catatan</label>
+          <textarea id="aNotes" placeholder="Detail order..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-cancel" onclick="closeAdminModal()">Batal</button>
+          <button type="submit" class="btn-save">💾 Simpan Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="admin-toast" id="adminToast">
+    <span class="toast-icon" id="adminToastIcon">✅</span>
+    <span class="toast-msg" id="adminToastMsg">Berhasil!</span>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

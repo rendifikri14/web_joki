@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SkripsiPro — Layanan Jasa Skripsi, Tesis, Olah Data SPSS & Jurnal Ilmiah #1 di Indonesia. Garansi revisi unlimited, anti-plagiasi Turnitin & pendampingan sidang.">
+  <meta name="keywords" content="joki skripsi, jasa skripsi, joki tesis, olah data spss, jasa pembuatan jurnal, turnitin, bimbingan skripsi">
+  <title>SkripsiPro — Jasa Pembuatan Skripsi, Tesis & Olah Data Terpercaya #1</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== 1. Top Announcement Bar ===== -->
+  <aside class="announcement-bar" id="announcementBar">
+    <div class="container">
+      <div class="announcement-text">
+        <span class="announcement-badge">🔥 PROMO WISUDA 2026</span>
+        <span>Diskon Spesial s.d <strong>30%</strong> + Gratis PPT Sidang & Cek Turnitin untuk 10 Pendaftar Pertama Hari Ini!</span>
+        <a href="#kalkulator" class="announcement-link">Hitung Biaya Sekarang ➔</a>
+      </div>
+      <button class="announcement-close" id="announcementClose" aria-label="Tutup Banner">&times;</button>
+    </div>
+  </aside>
+
+  <!-- ===== 2. Navbar ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <div class="brand-icon">📝</div>
+        <div class="brand-text">
+          Skripsi<span>Pro</span>
+          <span class="brand-status"><span class="status-dot"></span> Online</span>
+        </div>
+      </a>
+
+      <div class="navbar-links" id="navLinks">
+        <a href="#keunggulan">Keunggulan</a>
+        <a href="#kalkulator">Hitung Biaya</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#cek-resi">Cek Resi</a>
+        <a href="#testimoni">Testimoni</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <div class="navbar-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Ganti Tema" aria-label="Toggle light/dark mode">
+          <span class="theme-icon" id="themeIcon">🌙</span>
+        </button>
+        <a href="admin.html" class="btn-admin-link" title="Masuk ke Admin Dashboard">
+          🔐 Portal Admin
+        </a>
+        <button class="btn btn-primary btn-glow" onclick="openOrderModal()">
+          🚀 Pesan Sekarang
+        </button>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Buka Navigasi">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== 3. Hero Section ===== -->
+  <header class="hero" id="hero">
+    <div class="hero-orb hero-orb--1"></div>
+    <div class="hero-orb hero-orb--2"></div>
+    <div class="hero-orb hero-orb--3"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span class="pill-glow-dot"></span>
+          <span>Platform Jasa & Bimbingan Skripsi No. 1 di Indonesia</span>
+        </div>
+
+        <h1 class="hero-title">
+          Skripsi Tuntas Cepat,<br>
+          <span class="gradient-word">Lulus Sidang Tanpa Beban.</span>
+        </h1>
+
+        <p class="hero-desc">
+          Bimbingan dan pengerjaan <strong>Skripsi, Tesis, Olah Data & Jurnal</strong> dari BAB 1 s.d BAB 5. Dikerjakan oleh ratusan <strong>Magister & Doktor (S2/S3)</strong> dengan garansi revisi unlimited, lolos cek Turnitin & rahasia 100% aman.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#kalkulator" class="btn btn-primary btn-glow">
+            ⚡ Hitung Estimasi Biaya
+          </a>
+          <a href="https://wa.me/6281234567890?text=Halo%20SkripsiPro%2C%20saya%20ingin%20konsultasi%20skripsi" target="_blank" class="btn btn-wa">
+            💬 Chat Konsultan WhatsApp
+          </a>
+        </div>
+
+        <div class="hero-trust-badges">
+          <div class="avatar-stack">
+            <div class="avatar-item av-1">AR</div>
+            <div class="avatar-item av-2">DW</div>
+            <div class="avatar-item av-3">SP</div>
+            <div class="avatar-item av-4">FK</div>
+            <div class="avatar-item av-more">+5k</div>
+          </div>
+          <div class="trust-text">
+            <strong>5,420+ Mahasiswa Telah Lulus</strong>
+            <span class="trust-rating">★★★★★ 4.9/5.0</span> dari 120+ Universitas se-Indonesia
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Glassmorphic Visual Dashboard -->
+      <div class="hero-visual">
+        <div class="float-badge float-badge--top">
+          <div class="float-icon emerald">🛡️</div>
+          <div>
+            <h5>Turnitin Lolos Aman</h5>
+            <p>Similarity 4% (Under 15%)</p>
+          </div>
+        </div>
+
+        <div class="float-badge float-badge--bottom">
+          <div class="float-icon amber">⚡</div>
+          <div>
+            <h5>Pengerjaan Kilat</h5>
+            <p>Bisa Selesai 3-7 Hari</p>
+          </div>
+        </div>
+
+        <div class="hero-dashboard-preview">
+          <!-- Visual Tab Bar -->
+          <div class="hero-visual-tabs">
+            <button class="hero-tab-btn active" data-tab="progress">
+              📊 Live Progres
+            </button>
+            <button class="hero-tab-btn" data-tab="turnitin">
+              🛡️ Cek Turnitin
+            </button>
+            <button class="hero-tab-btn" data-tab="feedback">
+              💬 Catatan Bimbingan
+            </button>
+          </div>
+
+          <!-- Header Status -->
+          <div class="hero-card-header">
+            <div class="client-meta">
+              <div class="client-avatar-badge">🎓</div>
+              <div class="client-title">
+                <h4>Order #SK-2026-1847</h4>
+                <p>Manajemen Bisnis — Universitas Indonesia</p>
+              </div>
+            </div>
+            <span class="order-badge-pill">On Progress</span>
+          </div>
+
+          <!-- Tab 1: Progress Content -->
+          <div class="hero-tab-content" id="tab-content-progress">
+            <div class="progress-list">
+              <div class="progress-row">
+                <div class="progress-header-info">
+                  <span class="progress-name"><span class="check-icon">✓</span> BAB 1 — Latar Belakang & Masalah</span>
+                  <span class="progress-val">100% Selesai</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill" data-width="100"></div>
+                </div>
+              </div>
+
+              <div class="progress-row">
+                <div class="progress-header-info">
+                  <span class="progress-name"><span class="check-icon">✓</span> BAB 2 — Kajian Pustaka & Hipotesis</span>
+                  <span class="progress-val">100% Selesai</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill" data-width="100"></div>
+                </div>
+              </div>
+
+              <div class="progress-row">
+                <div class="progress-header-info">
+                  <span class="progress-name"><span class="check-icon">✓</span> BAB 3 — Metodologi & Kuesioner</span>
+                  <span class="progress-val">100% Selesai</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill fill-cyan" data-width="100"></div>
+                </div>
+              </div>
+
+              <div class="progress-row">
+                <div class="progress-header-info">
+                  <span class="progress-name">⚡ BAB 4 — Olah Data SPSS & Pembahasan</span>
+                  <span class="progress-val">85% In-Review</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill fill-amber" data-width="85"></div>
+                </div>
+              </div>
+
+              <div class="progress-row">
+                <div class="progress-header-info">
+                  <span class="progress-name">⏳ BAB 5 — Kesimpulan & Saran</span>
+                  <span class="progress-val">Finishing</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill" data-width="50"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Turnitin Content -->
+          <div class="hero-tab-content" id="tab-content-turnitin" style="display:none;">
+            <div class="turnitin-showcase">
+              <div class="turnitin-score-banner">
+                <div>
+                  <div class="turnitin-score-num">4%</div>
+                  <div class="turnitin-score-label">Similarity Index Turnitin</div>
+                </div>
+                <span class="turnitin-status-tag">✓ VERIFIED PASSED</span>
+              </div>
+              <div style="font-size:0.84rem; color:var(--text-secondary); line-height:1.6;">
+                <p>• Internet Sources: <strong>2%</strong></p>
+                <p>• Publications: <strong>1%</strong></p>
+                <p>• Student Papers: <strong>1%</strong></p>
+                <p>• AI Generated Content: <strong>0% (Human Written)</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Feedback Content -->
+          <div class="hero-tab-content" id="tab-content-feedback" style="display:none;">
+            <div style="background:rgba(0,0,0,0.3); border-radius:12px; padding:16px; font-size:0.84rem; color:var(--text-secondary); line-height:1.6;">
+              <div style="color:var(--emerald); font-weight:700; margin-bottom:6px;">👨‍🏫 Catatan Dosen Pembimbing:</div>
+              <p>"Metode SEM-PLS sudah tepat, uji validitas konvergen & diskriminan sangat rapi. Lanjutkan penarikan kesimpulan Bab 5 untuk persiapan jadwal seminar hasil."</p>
+              <div style="margin-top:10px; font-size:0.75rem; color:var(--primary-light);">✅ Tim SkripsiPro siap mendampingi pembuatan Slide Presentasi PPT.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== 4. University Marquee Ticker ===== -->
+  <section class="university-marquee-section">
+    <div class="marquee-label">Dipercaya oleh Mahasiswa dari 120+ Universitas Terkemuka</div>
+    <div class="marquee-track">
+      <span class="univ-badge">🏛️ Universitas Indonesia (UI)</span>
+      <span class="univ-badge">🏛️ Institut Teknologi Bandung (ITB)</span>
+      <span class="univ-badge">🏛️ Universitas Gadjah Mada (UGM)</span>
+      <span class="univ-badge">🏛️ Universitas Airlangga (UNAIR)</span>
+      <span class="univ-badge">🏛️ Universitas Brawijaya (UB)</span>
+      <span class="univ-badge">🏛️ Universitas Diponegoro (UNDIP)</span>
+      <span class="univ-badge">🏛️ Institut Teknologi Sepuluh Nopember (ITS)</span>
+      <span class="univ-badge">🏛️ Universitas Padjadjaran (UNPAD)</span>
+      <span class="univ-badge">🏛️ BINUS University</span>
+      <span class="univ-badge">🏛️ Telkom University</span>
+      <span class="univ-badge">🏛️ Universitas Sebelas Maret (UNS)</span>
+      <span class="univ-badge">🏛️ Universitas Hasanuddin (UNHAS)</span>
+      <!-- Duplicate for seamless infinite loop -->
+      <span class="univ-badge">🏛️ Universitas Indonesia (UI)</span>
+      <span class="univ-badge">🏛️ Institut Teknologi Bandung (ITB)</span>
+      <span class="univ-badge">🏛️ Universitas Gadjah Mada (UGM)</span>
+      <span class="univ-badge">🏛️ Universitas Airlangga (UNAIR)</span>
+      <span class="univ-badge">🏛️ Universitas Brawijaya (UB)</span>
+      <span class="univ-badge">🏛️ Universitas Diponegoro (UNDIP)</span>
+      <span class="univ-badge">🏛️ Institut Teknologi Sepuluh Nopember (ITS)</span>
+      <span class="univ-badge">🏛️ Universitas Padjadjaran (UNPAD)</span>
+    </div>
+  </section>
+
+  <!-- ===== 5. Bento Grid Section (Keunggulan Utama) ===== -->
+  <section class="section bento-section" id="keunggulan">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-badge">💎 Keunggulan SkripsiPro</div>
+        <h2 class="section-title">Kenapa Ribuan Mahasiswa <span class="gradient-text">Memilih Kami?</span></h2>
+        <p class="section-desc mx-auto">Kami tidak sekadar menulis, kami memastikan kamu memahami setiap bab karya ilmiahmu hingga dinyatakan lulus sidang.</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Bento 1: Plagiarism (Span 2) -->
+        <div class="bento-card span-2 highlight reveal">
+          <div>
+            <div class="bento-icon">🛡️</div>
+            <h3>Garansi Anti-Plagiasi & Turnitin Under 15%</h3>
+            <p>Setiap dokumen diperiksa menggunakan Turnitin Repository Resmi tanpa tersimpan di database kampus. Dilengkapi parafrase akademik berkualitas tinggi bebas deteksi AI.</p>
+            
+            <div class="turnitin-slider-demo">
+              <div class="slider-compare-bars">
+                <div class="compare-bar-item">
+                  <div class="compare-bar-header">
+                    <span style="color:#F43F5E;">❌ Jasa Lain / Draft Mentah (Plagiarisme Tinggi)</span>
+                    <span style="color:#F43F5E;">44% Similiarity</span>
+                  </div>
+                  <div class="compare-bar-track">
+                    <div class="compare-bar-fill red"></div>
+                  </div>
+                </div>
+                <div class="compare-bar-item">
+                  <div class="compare-bar-header">
+                    <span style="color:#10B981;">✅ Standar Hasil SkripsiPro (Lolos ACC Kampus)</span>
+                    <span style="color:#10B981;">6% Similiarity</span>
+                  </div>
+                  <div class="compare-bar-track">
+                    <div class="compare-bar-fill green"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento 2: Penulis Ahli S2/S3 -->
+        <div class="bento-card reveal">
+          <div>
+            <div class="bento-icon">👨‍🎓</div>
+            <h3>150+ Penulis Magister & Doktor</h3>
+            <p>Karya ilmiahmu dikerjakan oleh mentor linier sesuai bidang studimu (Saintek, Soshum, Kedokteran, IT, Hukum, dll).</p>
+          </div>
+          <div style="margin-top:20px; font-size:0.8rem; color:var(--secondary-light); font-weight:700;">
+            ✓ Lulusan UI, ITB, UGM & Top Kampus
+          </div>
+        </div>
+
+        <!-- Bento 3: Pembayaran Cicilan -->
+        <div class="bento-card reveal">
+          <div>
+            <div class="bento-icon">💳</div>
+            <h3>Sistem Bayar Bertahap (Per Bab)</h3>
+            <p>Lebih aman dan nyaman. Kamu cukup bayar DP 30-50% atau bayar bertahap per bab yang sudah selesai direview.</p>
+          </div>
+          <div style="margin-top:20px; font-size:0.8rem; color:var(--emerald); font-weight:700;">
+            ✓ Garansi Uang Kembali 100%
+          </div>
+        </div>
+
+        <!-- Bento 4: Pendampingan Sidang (Span 2) -->
+        <div class="bento-card span-2 reveal">
+          <div>
+            <div class="bento-icon">🎯</div>
+            <h3>Pendampingan Bimbingan & Simulasi Sidang A-Z</h3>
+            <p>Bukan cuma naskah! Kami siapkan catatan rangkuman poin penting, bocoran pertanyaan penguji, slide PPT animasi, dan konsultasi privat agar kamu percaya diri saat maju bimbingan maupun ujian sidang.</p>
+          </div>
+          <div style="display:flex; gap:12px; margin-top:20px; flex-wrap:wrap;">
+            <span style="background:rgba(255,255,255,0.06); padding:4px 12px; border-radius:999px; font-size:0.76rem; color:var(--primary-light);">📊 Free PPT Sidang</span>
+            <span style="background:rgba(255,255,255,0.06); padding:4px 12px; border-radius:999px; font-size:0.76rem; color:var(--secondary-light);">💡 Kunci Jawaban Dosen</span>
+            <span style="background:rgba(255,255,255,0.06); padding:4px 12px; border-radius:999px; font-size:0.76rem; color:var(--emerald);">🔄 Revisi Unlimited</span>
+          </div>
+        </div>
+
+        <!-- Bento 5: Olah Data Terlengkap -->
+        <div class="bento-card reveal">
+          <div>
+            <div class="bento-icon">📈</div>
+            <h3>Mastery Olah Data Statistik</h3>
+            <p>Pengolahan data valid dan interpretasi mendalam dengan tools lengkap: SPSS, SmartPLS, EViews, AMOS, Python, Stata & NVivo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. Interactive Calculator Section ===== -->
+  <section class="section calculator-section" id="kalkulator">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-badge">🧮 Kalkulator Interaktif</div>
+        <h2 class="section-title">Hitung Estimasi Biaya <span class="gradient-text">Secara Transparan</span></h2>
+        <p class="section-desc mx-auto">Sesuaikan jenjang pendidikan, lingkup pengerjaan, dan urgensi deadline untuk mendapatkan penawaran terbaik tanpa biaya tersembunyi.</p>
+      </div>
+
+      <div class="calc-wrapper reveal">
+        <!-- Left Column: Controls -->
+        <div class="calc-options">
+          <!-- 1. Jenjang Pendidikan -->
+          <div>
+            <div class="calc-group-title">🎓 1. Pilih Jenjang Pendidikan:</div>
+            <div class="calc-grid-selector">
+              <div class="calc-pill-btn" data-calc-jenjang="d3">
+                <span class="title">Diploma (D3/D4)</span>
+                <span class="subtitle">Tugas Akhir</span>
+              </div>
+              <div class="calc-pill-btn active" data-calc-jenjang="s1">
+                <span class="title">Sarjana (S1)</span>
+                <span class="subtitle">Skripsi / TA</span>
+              </div>
+              <div class="calc-pill-btn" data-calc-jenjang="s2">
+                <span class="title">Magister (S2)</span>
+                <span class="subtitle">Tesis & Riset</span>
+              </div>
+              <div class="calc-pill-btn" data-calc-jenjang="s3">
+                <span class="title">Doktoral (S3)</span>
+                <span class="subtitle">Disertasi</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Lingkup Pengerjaan -->
+          <div>
+            <div class="calc-group-title">📑 2. Pilih Lingkup Pengerjaan:</div>
+            <div class="calc-grid-selector">
+              <div class="calc-pill-btn" data-calc-scope="proposal">
+                <span class="title">Proposal (BAB 1-3)</span>
+                <span class="subtitle">Ide s/d Metodologi</span>
+              </div>
+              <div class="calc-pill-btn active" data-calc-scope="full">
+                <span class="title">Full Skripsi (BAB 1-5)</span>
+                <span class="subtitle">Lengkap sampai Beres</span>
+              </div>
+              <div class="calc-pill-btn" data-calc-scope="olahdata">
+                <span class="title">Olah Data Saja</span>
+                <span class="subtitle">SPSS / SmartPLS</span>
+              </div>
+              <div class="calc-pill-btn" data-calc-scope="jurnal">
+                <span class="title">Jurnal Ilmiah</span>
+                <span class="subtitle">SINTA 2-4 / Scopus</span>
+              </div>
+              <div class="calc-pill-btn" data-calc-scope="coding">
+                <span class="title">Aplikasi / Coding TA</span>
+                <span class="subtitle">Web / Mobile / AI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Urgensi Deadline -->
+          <div>
+            <div class="calc-group-title">⏰ 3. Urgensi / Target Waktu Pengerjaan:</div>
+            <div class="calc-grid-selector">
+              <div class="calc-pill-btn" data-calc-urgensi="santai">
+                <span class="title">Santai (30 Hari)</span>
+                <span class="subtitle">Diskon Ekstra 10%</span>
+              </div>
+              <div class="calc-pill-btn active" data-calc-urgensi="standar">
+                <span class="title">Standar (14-21 Hari)</span>
+                <span class="subtitle">Paling Direkomendasikan</span>
+              </div>
+              <div class="calc-pill-btn" data-calc-urgensi="kilat">
+                <span class="title">Kilat Express (7 Hari)</span>
+                <span class="subtitle">Prioritas Pengerjaan</span>
+              </div>
+              <div class="calc-pill-btn" data-calc-urgensi="super">
+                <span class="title">Super Kilat (3-4 Hari)</span>
+                <span class="subtitle">Deadline Sangat Mepet</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Layanan Tambahan (Add-ons) -->
+          <div>
+            <div class="calc-group-title">🎁 4. Layanan Tambahan (Opsional):</div>
+            <div class="addon-list">
+              <div class="addon-card" data-calc-addon="ppt">
+                <div class="addon-info">
+                  <div class="addon-checkbox"></div>
+                  <div class="addon-text">
+                    <h5>Slide Presentasi Sidang (PPT / Canva Animasi)</h5>
+                    <p>Desain visual profesional 15-20 slide + naskah panduan bicara</p>
+                  </div>
+                </div>
+                <div class="addon-price">+Rp 150.000</div>
+              </div>
+
+              <div class="addon-card checked" data-calc-addon="turnitin">
+                <div class="addon-info">
+                  <div class="addon-checkbox">✓</div>
+                  <div class="addon-text">
+                    <h5>Laporan Resmi Cek Turnitin No-Repository</h5>
+                    <p>Memastikan similarity di bawah toleransi kampus</p>
+                  </div>
+                </div>
+                <div class="addon-price" style="color:var(--emerald);">GRATIS (Promo)</div>
+              </div>
+
+              <div class="addon-card" data-calc-addon="simulasi">
+                <div class="addon-info">
+                  <div class="addon-checkbox"></div>
+                  <div class="addon-text">
+                    <h5>Simulasi Tanya Jawab & Mock Sidang 1-on-1</h5>
+                    <p>Bedah materi & prediksi 25 pertanyaan dosen pembimbing/penguji</p>
+                  </div>
+                </div>
+                <div class="addon-price">+Rp 250.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Result Box -->
+        <div class="calc-result-box">
+          <div>
+            <div class="result-header">
+              <span>Estimasi Investasi Kelulusan:</span>
+              <div class="result-price-display">
+                <div class="result-price-val" id="calcResultPrice">Rp 2.500.000</div>
+                <div class="result-price-old" id="calcResultOldPrice">Rp 3.125.000</div>
+              </div>
+              <div id="calcResultScopeName" style="font-size:0.86rem; color:var(--primary-light); font-weight:700; margin-top:4px;">
+                Paket S1 — Full Skripsi (BAB 1-5)
+              </div>
+            </div>
+
+            <div class="result-features-list">
+              <div class="result-feat-item">
+                <span class="icon">✓</span> Garansi Revisi Unlimited Sampai ACC Sidang
+              </div>
+              <div class="result-feat-item">
+                <span class="icon">✓</span> Format & Template Disesuaikan Pedoman Kampus
+              </div>
+              <div class="result-feat-item">
+                <span class="icon">✓</span> Bebas Konsultasi Langsung dengan Penulis Ahli
+              </div>
+              <div class="result-feat-item">
+                <span class="icon">✓</span> Jaminan 100% Anti Plagiasi & Privasi Terkunci (NDA)
+              </div>
+              <div class="result-feat-item">
+                <span class="icon">✓</span> Opsi Pembayaran Bertahap DP 50%
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button class="btn btn-primary btn-glow calc-cta-btn" onclick="orderFromCalculator()">
+              🚀 Ambil Paket Ini & Konsultasi
+            </button>
+            <div style="text-align:center; font-size:0.75rem; color:var(--text-muted); margin-top:10px;">
+              🔒 Data dan identitas kamu dijamin 100% aman dan dirahasiakan.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===== 8. Services Grid ===== -->
+  <section class="section services-section" id="layanan">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-badge">💼 Layanan Profesional</div>
+        <h2 class="section-title">Solusi Lengkap Segala <span class="gradient-text">Tugas Akademik</span></h2>
+        <p class="section-desc mx-auto">Didukung oleh tim multidisiplin dengan keahlian riset ilmiah tingkat tinggi.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card reveal">
+          <div>
+            <div class="service-top">
+              <div class="service-icon-box">📄</div>
+              <span class="service-tag">Paling Populer</span>
+            </div>
+            <h3>Joki & Bimbingan Skripsi S1</h3>
+            <p>Pengerjaan menyeluruh BAB 1 sampai BAB 5, perumusan masalah, kuesioner, hingga pembahasan kesimpulan.</p>
+            <ul class="service-checklist">
+              <li><span class="check">✓</span> Semua Jurusan (Saintek & Soshum)</li>
+              <li><span class="check">✓</span> Gratis Revisi sampai Lulus</li>
+              <li><span class="check">✓</span> Laporan Turnitin & PPT Sidang</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline service-order-btn" onclick="openOrderModal({service:'skripsi'})">Pesan Layanan →</button>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card reveal">
+          <div>
+            <div class="service-top">
+              <div class="service-icon-box">📚</div>
+              <span class="service-tag">Tingkat Lanjut</span>
+            </div>
+            <h3>Tesis & Disertasi (S2 / S3)</h3>
+            <p>Penyusunan naskah akademik lanjutan dengan novelty, theoretical framework kuat, dan metodologi mutakhir.</p>
+            <ul class="service-checklist">
+              <li><span class="check">✓</span> Dikerjakan oleh Doktor & Peneliti Senior</li>
+              <li><span class="check">✓</span> Referensi Jurnal Internasional Q1-Q3</li>
+              <li><span class="check">✓</span> Pendampingan Ujian Tertutup/Terbuka</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline service-order-btn" onclick="openOrderModal({service:'tesis'})">Pesan Layanan →</button>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card reveal">
+          <div>
+            <div class="service-top">
+              <div class="service-icon-box">📊</div>
+              <span class="service-tag">Akurat & Cepat</span>
+            </div>
+            <h3>Olah Data & Analisis Statistik</h3>
+            <p>Pengolahan data primer maupun sekunder dengan interpretasi tabel & grafik lengkap yang mudah dipresentasikan.</p>
+            <ul class="service-checklist">
+              <li><span class="check">✓</span> SPSS, SmartPLS, EViews, AMOS, Stata</li>
+              <li><span class="check">✓</span> Uji Asumsi Klasik & Regresi Berganda</li>
+              <li><span class="check">✓</span> Garansi Data Signifikan Sesuai Teori</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline service-order-btn" onclick="openOrderModal({service:'olahdata'})">Pesan Layanan →</button>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card reveal">
+          <div>
+            <div class="service-top">
+              <div class="service-icon-box">🔬</div>
+              <span class="service-tag">Publikasi Akreditasi</span>
+            </div>
+            <h3>Jurnal SINTA & Scopus</h3>
+            <p>Penulisan paper ilmiah konversi dari skripsi/tesis dan pendampingan submission hingga accepted di jurnal bereputasi.</p>
+            <ul class="service-checklist">
+              <li><span class="check">✓</span> Jurnal Nasional SINTA 1 s/d SINTA 5</li>
+              <li><span class="check">✓</span> Jurnal Internasional Terindeks Scopus</li>
+              <li><span class="check">✓</span> Layouting Sesuai Template Jurnal</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline service-order-btn" onclick="openOrderModal({service:'jurnal'})">Pesan Layanan →</button>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card reveal">
+          <div>
+            <div class="service-top">
+              <div class="service-icon-box">💻</div>
+              <span class="service-tag">Full Stack IT</span>
+            </div>
+            <h3>Aplikasi & Coding Tugas Akhir</h3>
+            <p>Pembuatan sistem informasi, aplikasi mobile, website, machine learning, IoT, dan algoritma cerdas untuk jurusan Informatika.</p>
+            <ul class="service-checklist">
+              <li><span class="check">✓</span> Full Source Code + Database + Panduan</li>
+              <li><span class="check">✓</span> Video Demo & Penjelasan Struktur Code</li>
+              <li><span class="check">✓</span> Bantuan Remote Install di Laptop Klien</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline service-order-btn" onclick="openOrderModal({service:'coding'})">Pesan Layanan →</button>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card reveal">
+          <div>
+            <div class="service-top">
+              <div class="service-icon-box">📝</div>
+              <span class="service-tag">Express 24 Jam</span>
+            </div>
+            <h3>Makalah, Essay & Review Jurnal</h3>
+            <p>Bantuan tugas kuliah harian, makalah UTS/UAS, critical book review, dan resume artikel ilmiah terpercaya.</p>
+            <ul class="service-checklist">
+              <li><span class="check">✓</span> Pengerjaan Cepat Bisa 24 Jam</li>
+              <li><span class="check">✓</span> Referensi Mendeley / Zotero Otomatis</li>
+              <li><span class="check">✓</span> Harga Mahasiswa Ramah Kantong</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline service-order-btn" onclick="openOrderModal({service:'makalah'})">Pesan Layanan →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 9. Live Order / Resi Tracker Demo ===== -->
+  <section class="section tracker-section" id="cek-resi">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-badge">🔍 Transparansi 100%</div>
+        <h2 class="section-title">Cek Resi & <span class="gradient-text">Status Pengerjaan Skripsi</span></h2>
+        <p class="section-desc mx-auto">Pantau milestone pengerjaan skripsimu secara real-time seperti melacak resi ekspedisi.</p>
+      </div>
+
+      <div class="tracker-box reveal">
+        <div class="tracker-search-bar">
+          <input type="text" id="inputTrackId" class="tracker-search-input" placeholder="Masukkan ID Order (Contoh: SK-2026-1847)" value="SK-2026-1847">
+          <button class="btn btn-primary" id="btnSearchTrack">🔍 Lacak</button>
+        </div>
+
+        <div class="sample-ids-hint">
+          Coba ID Demo Klien:
+          <span class="sample-id-tag" onclick="trackQuickId('SK-2026-1847')">#SK-2026-1847 (Manajemen UI)</span> |
+          <span class="sample-id-tag" onclick="trackQuickId('SK-2026-1920')">#SK-2026-1920 (Hukum UGM)</span> |
+          <span class="sample-id-tag" onclick="trackQuickId('SK-2026-2005')">#SK-2026-2005 (ITB Informatika)</span>
+        </div>
+
+        <!-- Rendered Content Container -->
+        <div id="trackerResultContent">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 10. Comparison Section ===== -->
+  <section class="section comparison-section">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-badge">⚖️ Perbandingan Kualitas</div>
+        <h2 class="section-title">Mengapa Mahasiswa Memilih <span class="gradient-text">SkripsiPro?</span></h2>
+        <p class="section-desc mx-auto">Bandingkan perbedaan layanan profesional kami dengan joki freelance lepas atau bot AI mentah.</p>
+      </div>
+
+      <div class="comparison-table-wrapper reveal">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Fitur & Jaminan Layanan</th>
+              <th class="col-skripsipro">🏆 SkripsiPro</th>
+              <th>Joki Freelancer Lepas</th>
+              <th>Generate Bot AI Mentah</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-feature">Garansi Revisi Unlimited Sampai ACC Dosen</td>
+              <td class="col-skripsipro"><span class="icon-check">✓</span> Bebas Revisi Sampai Lulus</td>
+              <td class="col-other"><span class="icon-cross">✗</span> Dibatasi 1-2x / Kerap Ghosting</td>
+              <td class="col-other"><span class="icon-cross">✗</span> Tidak Bisa Diajak Diskusi</td>
+            </tr>
+            <tr>
+              <td class="col-feature">Kualitas Bebas Deteksi AI & Plagiasi Turnitin</td>
+              <td class="col-skripsipro"><span class="icon-check">✓</span> Turnitin Asli Under 15%</td>
+              <td class="col-other"><span class="icon-cross">✗</span> Sering Copy-Paste & Ditolak</td>
+              <td class="col-other"><span class="icon-cross">✗</span> 100% Terdeteksi AI Generator</td>
+            </tr>
+            <tr>
+              <td class="col-feature">Tim Penulis Ahli Linier (S2/S3)</td>
+              <td class="col-skripsipro"><span class="icon-check">✓</span> 150+ Ahli Tiap Jurusan</td>
+              <td class="col-other"><span class="icon-cross">✗</span> Orang yang Sama Garap Semua</td>
+              <td class="col-other"><span class="icon-cross">✗</span> Halusinasi Data & Fakta Palsu</td>
+            </tr>
+            <tr>
+              <td class="col-feature">Kerahasiaan Identitas (Strict NDA Protection)</td>
+              <td class="col-skripsipro"><span class="icon-check">✓</span> 100% Enkripsi & Aman</td>
+              <td class="col-other"><span class="icon-cross">✗</span> Rawan Bocor & Pemerasan</td>
+              <td class="col-other"><span class="icon-cross">✗</span> Data Masuk Training Public</td>
+            </tr>
+            <tr>
+              <td class="col-feature">Kelengkapan Sidang (PPT + Olah Data Asli)</td>
+              <td class="col-skripsipro"><span class="icon-check">✓</span> Full Output SPSS/PLS + Slide</td>
+              <td class="col-other"><span class="icon-cross">✗</span> Tambah Biaya Mahal</td>
+              <td class="col-other"><span class="icon-cross">✗</span> Tidak Menyediakan File Olah Data</td>
+            </tr>
+            <tr>
+              <td class="col-feature">Sistem Pembayaran Bertahap / DP Aman</td>
+              <td class="col-skripsipro"><span class="icon-check">✓</span> Bisa Bayar per Bab</td>
+              <td class="col-other"><span class="icon-cross">✗</span> Minta Pelunasan di Awal</td>
+              <td class="col-other"><span class="icon-check">✓</span> Berlangganan Dollar</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 11. Pricing Packages Section ===== -->
+  <section class="section pricing-section" id="harga">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-badge">💰 Paket Harga Transparan</div>
+        <h2 class="section-title">Investasi Masa Depan <span class="gradient-text">Wisuda Tepat Waktu</span></h2>
+        <p class="section-desc mx-auto">Pilih paket yang paling sesuai dengan kebutuhan skripsi dan anggaranmu.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Tier 1: Starter -->
+        <div class="pricing-card reveal">
+          <div>
+            <div class="pricing-tier-name">Paket Basic</div>
+            <h3>Skripsi Kualitatif / Literatur</h3>
+            <p class="tier-desc">Cocok untuk skripsi studi kepustakaan, deskriptif, atau tugas akhir D3/S1 non-olah data berat.</p>
+            
+            <div class="pricing-price-box">
+              <span class="pricing-price-num">Rp 1.5 Jt</span>
+              <span class="unit">/ paket lengkap</span>
+            </div>
+            <div class="pricing-duration">⚡ Estimasi 10 - 14 Hari Kerja</div>
+
+            <ul class="pricing-features-list">
+              <li><span class="check">✓</span> Naskah BAB 1 s.d BAB 5 Lengkap</li>
+              <li><span class="check">✓</span> Format Standar Panduan Kampus</li>
+              <li><span class="check">✓</span> Gratis 3x Revisi Dosen</li>
+              <li><span class="check">✓</span> Cek Turnitin Similarity Aman</li>
+              <li><span class="check">✓</span> Konsultasi via WhatsApp</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline" onclick="openOrderModal({package:'basic'})">Pilih Paket Basic</button>
+        </div>
+
+        <!-- Tier 2: Popular (Pro) -->
+        <div class="pricing-card popular reveal">
+          <div class="pricing-popular-badge">🔥 PALING BANYAK DIPILIH</div>
+          <div>
+            <div class="pricing-tier-name">Paket Skripsi Pro</div>
+            <h3>Skripsi Kuantitatif & Olah Data</h3>
+            <p class="tier-desc">Solusi komplit untuk skripsi kuantitatif dengan kuesioner, olah data statistik, dan pendampingan sidang.</p>
+            
+            <div class="pricing-price-box">
+              <span class="pricing-price-num">Rp 2.5 Jt</span>
+              <span class="unit">/ paket lengkap</span>
+            </div>
+            <div class="pricing-duration">⚡ Estimasi 14 - 21 Hari Kerja</div>
+
+            <ul class="pricing-features-list">
+              <li><span class="check">✓</span> Full BAB 1 s.d BAB 5 + Matriks Penelitian</li>
+              <li><span class="check">✓</span> <strong>Garansi Revisi Unlimited Sampai Lulus</strong></li>
+              <li><span class="check">✓</span> Olah Data SPSS / SmartPLS / AMOS / EViews</li>
+              <li><span class="check">✓</span> Kuesioner & Lampiran Hasil Uji Statistik</li>
+              <li><span class="check">✓</span> Gratis Slide Presentasi Sidang (PPT)</li>
+              <li><span class="check">✓</span> Bimbingan & Kunci Jawaban Sidang</li>
+            </ul>
+          </div>
+          <button class="btn btn-primary btn-glow" onclick="openOrderModal({package:'pro'})">Pilih Paket Pro</button>
+        </div>
+
+        <!-- Tier 3: Premium (Tesis/Scopus) -->
+        <div class="pricing-card reveal">
+          <div>
+            <div class="pricing-tier-name">Paket Premium</div>
+            <h3>Tesis S2 / Jurnal Internasional</h3>
+            <p class="tier-desc">Khusus program Pascasarjana, Tesis S2, Disertasi S3, atau Jurnal bereputasi SINTA & Scopus.</p>
+            
+            <div class="pricing-price-box">
+              <span class="pricing-price-num">Rp 4.9 Jt</span>
+              <span class="unit">/ paket master</span>
+            </div>
+            <div class="pricing-duration">⚡ Estimasi 21 - 35 Hari Kerja</div>
+
+            <ul class="pricing-features-list">
+              <li><span class="check">✓</span> Full Tesis / Publikasi Jurnal Scopus/SINTA</li>
+              <li><span class="check">✓</span> Penulis Mentor Tingkat Doktor (Ph.D)</li>
+              <li><span class="check">✓</span> Olah Data Advanced (SEM / Path / Panel Data)</li>
+              <li><span class="check">✓</span> Garansi Revisi Unlimited Sampai Wisuda</li>
+              <li><span class="check">✓</span> Prioritas Pengerjaan & Fast Response 24/7</li>
+              <li><span class="check">✓</span> Simulasi Sidang Privat 1-on-1</li>
+            </ul>
+          </div>
+          <button class="btn btn-secondary" onclick="openOrderModal({package:'premium'})">Pilih Paket Premium</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 12. Testimonials Section ===== -->
+  <section class="section testimonials-section" id="testimoni">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-badge">⭐ Testimoni Klien</div>
+        <h2 class="section-title">Kisah Sukses <span class="gradient-text">Para Wisudawan</span></h2>
+        <p class="section-desc mx-auto">Kepuasan dan kelulusan klien adalah bukti dedikasi terbaik kami.</p>
+      </div>
+
+      <!-- Testimonials Category Filters -->
+      <div class="testimonial-filter-tabs reveal">
+        <button class="testi-filter-btn active" data-filter="all">Semua Jurusan</button>
+        <button class="testi-filter-btn" data-filter="soshum">Soshum & Bisnis</button>
+        <button class="testi-filter-btn" data-filter="saintek">Saintek & Teknik</button>
+        <button class="testi-filter-btn" data-filter="kesehatan">Kedokteran & Kesehatan</button>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testi 1 -->
+        <div class="testimonial-card reveal" data-category="soshum">
+          <div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"Sempat buntu selama 6 bulan di Bab 4 karena data SPSS tidak normal. Bersama SkripsiPro cuma butuh 5 hari buat re-estimasi data dan perbaikan interpretasi. Pas sidang langsung dapet nilai A! Makasih banget tim SkripsiPro!"</p>
+          </div>
+          <div class="testi-author-box">
+            <div class="testi-avatar">?</div>
+            <div class="testi-info">
+              <h4>Anonim</h4>
+              <p>S1 Manajemen — Universitas Swasta</p>
+              <span class="testi-tag-verified">✓ Wisuda Cumlaude</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testi 2 -->
+        <div class="testimonial-card reveal" data-category="saintek">
+          <div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"Pengerjaan coding skripsi AI deteksi citra bener-bener mantap. Dikasih video penjelasan baris per baris kodenya, jadi pas dosen penguji nanya detail algoritma, saya bisa jawab lancar tanpa gugup."</p>
+          </div>
+          <div class="testi-author-box">
+            <div class="testi-avatar" style="background:linear-gradient(135deg,#06B6D4,#3B82F6);">?</div>
+            <div class="testi-info">
+              <h4>Anonim</h4>
+              <p>Teknik Informatika — Universitas Negeri</p>
+              <span class="testi-tag-verified">✓ Lolos Ujian Sidang Skripsi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testi 3 -->
+        <div class="testimonial-card reveal" data-category="kesehatan">
+          <div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"Revisi dosen pembimbing yang rewel sampai 4 kali tetap dilayani dengan sabar dan cepat. Cek Turnitin hasilnya 5% bersih. Recommended buat anak kedokteran/keperawatan yang jadwal kliniknya padat!"</p>
+          </div>
+          <div class="testi-author-box">
+            <div class="testi-avatar" style="background:linear-gradient(135deg,#10B981,#059669);">?</div>
+            <div class="testi-info">
+              <h4>Anonim</h4>
+              <p>Pendidikan Dokter — Universitas Negeri</p>
+              <span class="testi-tag-verified">✓ ACC Ujian Hasil &amp; Yudisium</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testi 4 -->
+        <div class="testimonial-card reveal" data-category="soshum">
+          <div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"Tesis S2 saya selesai tepat waktu untuk syarat wisuda periode Maret. Analisis data panel di EViews detail banget dan naskah jurnalnya langsung accepted di SINTA 2!"</p>
+          </div>
+          <div class="testi-author-box">
+            <div class="testi-avatar" style="background:linear-gradient(135deg,#F59E0B,#FB923C);">?</div>
+            <div class="testi-info">
+              <h4>Anonim</h4>
+              <p>Magister Akuntansi — Universitas Swasta</p>
+              <span class="testi-tag-verified">✓ Published Jurnal SINTA 2</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testi 5 -->
+        <div class="testimonial-card reveal" data-category="soshum">
+          <div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"Kerahasiaan beneran dijaga ketat. Dokumen dikirim rapi via Google Drive terenkripsi dan pembayarannya bisa dicicil bertahap. Sangat profesional!"</p>
+          </div>
+          <div class="testi-author-box">
+            <div class="testi-avatar" style="background:linear-gradient(135deg,#EC4899,#8B5CF6);">?</div>
+            <div class="testi-info">
+              <h4>Anonim</h4>
+              <p>Ilmu Hukum — Universitas Negeri</p>
+              <span class="testi-tag-verified">✓ Nilai Skripsi A</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testi 6 -->
+        <div class="testimonial-card reveal" data-category="saintek">
+          <div>
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"Paket Pro dapet bonus PPT Sidang animasi yang keren banget. Penguji pas sidang sampai memuji tampilan slide dan penguasaan materi saya. Terima kasih SkripsiPro!"</p>
+          </div>
+          <div class="testi-author-box">
+            <div class="testi-avatar" style="background:linear-gradient(135deg,#8B5CF6,#6366F1);">?</div>
+            <div class="testi-info">
+              <h4>Anonim</h4>
+              <p>Teknik Sipil — Universitas Negeri</p>
+              <span class="testi-tag-verified">✓ Lulus Ujian Sidang</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 13. Searchable FAQ Section ===== -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-badge">❓ Pertanyaan Populer</div>
+        <h2 class="section-title">Hal yang Sering <span class="gradient-text">Ditanyakan</span></h2>
+        <p class="section-desc mx-auto">Temukan jawaban cepat seputar proses pemesanan, keamanan data, garansi, dan sistem bimbingan kami.</p>
+      </div>
+
+      <!-- FAQ Live Search Bar -->
+      <div class="faq-search-box reveal">
+        <span class="faq-search-icon">🔍</span>
+        <input type="text" id="faqSearchInput" class="faq-search-input" placeholder="Ketik kata kunci pertanyaan (contoh: revisi, data, pembayaran)...">
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item active reveal">
+          <button class="faq-question-btn">
+            <span>Apakah kerahasiaan data dan identitas saya terjamin 100%?</span>
+            <div class="faq-toggle-icon">+</div>
+          </button>
+          <div class="faq-answer-body">
+            <p>Ya, mutlak 100% aman dan dirahasiakan. Kami menerapkan protokol keamanan data berstandar Non-Disclosure Agreement (NDA). Identitas nama, NIM, jurusan, dan universitas kamu tidak akan pernah dipublikasikan atau dibagikan ke pihak mana pun.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question-btn">
+            <span>Bagaimana jika dosen pembimbing meminta banyak revisi?</span>
+            <div class="faq-toggle-icon">+</div>
+          </button>
+          <div class="faq-answer-body">
+            <p>Untuk Paket Pro dan Premium, revisi berstatus <strong>Unlimited (Gratis tanpa batas)</strong> sampai skripsi/tesis kamu disetujui untuk maju sidang dan lulus yudisium. Tim kami akan menyesuaikan catatan dosen secara tepat dan cepat.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question-btn">
+            <span>Apakah pengerjaan bebas dari deteksi AI dan plagiasi Turnitin?</span>
+            <div class="faq-toggle-icon">+</div>
+          </button>
+          <div class="faq-answer-body">
+            <p>Semua karya ilmiah ditulis secara humanis akademis oleh tim ahli berpengalaman, bukan bot copy-paste AI. Setiap dokumen wajib melewati pengecekan Turnitin No-Repository resmi dengan hasil similarity di bawah 15% (bahkan rata-rata klien kami 4-8%).</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question-btn">
+            <span>Apakah saya bisa melakukan pembayaran dengan sistem cicilan / DP?</span>
+            <div class="faq-toggle-icon">+</div>
+          </button>
+          <div class="faq-answer-body">
+            <p>Bisa! Kami menyediakan opsi pembayaran bertahap: DP 30-50% di awal untuk memulai pengerjaan, dan sisa pelunasan dilakukan secara bertahap sesuai progres bab yang sudah kamu review dan setujui.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question-btn">
+            <span>Apakah saya bisa berkonsultasi jika belum memiliki judul atau topik?</span>
+            <div class="faq-toggle-icon">+</div>
+          </button>
+          <div class="faq-answer-body">
+            <p>Tentu! Tim konsultan kami siap membantu merumuskan 3-5 opsi judul skripsi yang berbobot, memiliki novelty, dan mudah di-ACC dosen pembimbing secara GRATIS di awal konsultasi.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question-btn">
+            <span>Metode pembayaran apa saja yang diterima?</span>
+            <div class="faq-toggle-icon">+</div>
+          </button>
+          <div class="faq-answer-body">
+            <p>Kami menerima transfer bank resmi (BCA, Mandiri, BNI, BRI, BSI, Bank Jago), seluruh E-Wallet (GoPay, OVO, DANA, ShopeePay), serta pembayaran instan melalui QRIS seluruh Indonesia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 14. High-Impact CTA Banner ===== -->
+  <section class="section cta-banner-section">
+    <div class="container">
+      <div class="cta-banner-content reveal">
+        <h2>Siap Menyelesaikan Skripsimu & Wisuda Tahun Ini?</h2>
+        <p>Jangan biarkan deadline dan hambatan revisi menunda kelulusanmu. Konsultasikan naskah skripsi atau karya ilmiahmu sekarang bersama tim konsultan akademik terbaik!</p>
+        <div class="cta-buttons-group">
+          <a href="https://wa.me/6281234567890?text=Halo%20SkripsiPro%2C%20saya%20ingin%20konsultasi%20skripsi%20saya" target="_blank" class="btn btn-wa" style="font-size:1.05rem;">
+            💬 Konsultasi Cepat via WhatsApp
+          </a>
+          <button class="btn btn-outline" style="color:#FFF; border-color:rgba(255,255,255,0.4);" onclick="openOrderModal()">
+            📋 Isi Formulir Pemesanan
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 15. Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-about">
+          <a href="#" class="navbar-brand">
+            <div class="brand-icon">📝</div>
+            <div class="brand-text">Skripsi<span>Pro</span></div>
+          </a>
+          <p>Layanan profesional bimbingan & penulisan skripsi, tesis, olah data statistik, dan publikasi jurnal terpercaya sejak 2020. Membantu ribuan mahasiswa lulus dengan predikat memuaskan.</p>
+          
+          <div class="payment-badges-grid">
+            <span class="pay-badge">BCA</span>
+            <span class="pay-badge">MANDIRI</span>
+            <span class="pay-badge">BNI</span>
+            <span class="pay-badge">BRI</span>
+            <span class="pay-badge">QRIS</span>
+            <span class="pay-badge">GOPAY</span>
+            <span class="pay-badge">DANA</span>
+            <span class="pay-badge">OVO</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Layanan Kami</h4>
+          <div class="footer-nav-list">
+            <a href="#layanan" onclick="openOrderModal({service:'skripsi'})">Jasa Skripsi S1</a>
+            <a href="#layanan" onclick="openOrderModal({service:'tesis'})">Jasa Tesis S2</a>
+            <a href="#layanan" onclick="openOrderModal({service:'olahdata'})">Olah Data Statistik</a>
+            <a href="#layanan" onclick="openOrderModal({service:'jurnal'})">Publikasi Jurnal SINTA</a>
+            <a href="#layanan" onclick="openOrderModal({service:'coding'})">Aplikasi & Coding TA</a>
+            <a href="#layanan" onclick="openOrderModal({service:'makalah'})">Makalah & Essay</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <div class="footer-nav-list">
+            <a href="#keunggulan">Keunggulan</a>
+            <a href="#kalkulator">Kalkulator Biaya</a>
+
+            <a href="#cek-resi">Cek Resi Skripsi</a>
+            <a href="#testimoni">Testimoni Klien</a>
+            <a href="#faq">FAQ</a>
+            <a href="admin.html">Login Admin Portal</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontak & Kantor</h4>
+          <div class="footer-nav-list">
+            <a href="https://wa.me/6281234567890" target="_blank">📱 WhatsApp: +62 812-3456-7890</a>
+            <a href="mailto:support@skripsipro.id">📧 Email: support@skripsipro.id</a>
+            <a href="#">📍 Jakarta Selatan & Yogyakarta, Indonesia</a>
+            <a href="#">⏰ Layanan Online 24 Jam Non-Stop</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 SkripsiPro Indonesia. Seluruh hak cipta dilindungi undang-undang.</p>
+        <div class="footer-social-links">
+          <a href="#" class="social-icon-btn" aria-label="Instagram">📸</a>
+          <a href="#" class="social-icon-btn" aria-label="TikTok">🎵</a>
+          <a href="#" class="social-icon-btn" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-icon-btn" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== 16. Floating Elements ===== -->
+  <!-- WhatsApp Floating Widget -->
+  <a href="https://wa.me/6281234567890?text=Halo%20SkripsiPro%2C%20saya%20ingin%20konsultasi%20skripsi" target="_blank" class="floating-wa-btn" aria-label="Konsultasi WhatsApp">
+    <span>💬 Chat Konsultan</span>
+    <span class="wa-status-badge"><span class="status-dot"></span> 24/7</span>
+  </a>
+
+
+
+  <!-- Toast Notification (Success/Error) -->
+  <div class="toast-notice" id="toastNotice">
+    <span class="toast-icon">✅</span>
+    <span class="toast-msg" id="toastNoticeMsg">Order berhasil diproses!</span>
+  </div>
+
+  <!-- ===== 17. Smart Order Modal ===== -->
+  <div class="modal-overlay" id="orderModal">
+    <div class="order-modal-container">
+      <div class="modal-header-row">
+        <div class="modal-title-wrap">
+          <h3>📋 Formulir Pemesanan Skripsi</h3>
+          <p>Isi data untuk konsultasi cepat dan estimasi resmi.</p>
+        </div>
+        <button class="modal-close-btn" onclick="closeOrderModal()" aria-label="Tutup">&times;</button>
+      </div>
+
+      <form id="orderModalForm">
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label for="modalName">Nama Lengkap *</label>
+            <input type="text" id="modalName" placeholder="Contoh: Rian Pratama" required>
+          </div>
+          <div class="form-field">
+            <label for="modalPhone">Nomor WhatsApp *</label>
+            <input type="tel" id="modalPhone" placeholder="0812xxxxxxxx" required>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label for="modalUniv">Nama Universitas *</label>
+            <input type="text" id="modalUniv" placeholder="Contoh: Universitas Indonesia" required>
+          </div>
+          <div class="form-field">
+            <label for="modalJurusan">Jurusan / Program Studi *</label>
+            <input type="text" id="modalJurusan" placeholder="Contoh: Manajemen Keuangan" required>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label for="modalService">Jenis Layanan *</label>
+            <select id="modalService" required>
+              <option value="skripsi">Joki & Bimbingan Skripsi S1</option>
+              <option value="tesis">Joki Tesis & Riset S2</option>
+              <option value="olahdata">Olah Data & Analisis Statistik</option>
+              <option value="jurnal">Publikasi Jurnal SINTA / Scopus</option>
+              <option value="coding">Aplikasi & Coding Tugas Akhir</option>
+              <option value="makalah">Makalah / Essay / Paper</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="modalPackage">Pilihan Paket *</label>
+            <select id="modalPackage" required>
+              <option value="pro" selected>Paket Skripsi Pro (Rp 2.5 Jt) — Best Value</option>
+              <option value="basic">Paket Basic (Rp 1.5 Jt)</option>
+              <option value="premium">Paket Premium Tesis (Rp 4.9 Jt)</option>
+              <option value="custom">Paket Kustom (Diskusi Harga)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="modalDeadline">Target Deadline Selesai (Opsional)</label>
+          <input type="date" id="modalDeadline">
+        </div>
+
+        <div class="form-field">
+          <label for="modalNotes">Catatan / Detail Judul & Kebutuhan</label>
+          <textarea id="modalNotes" placeholder="Tuliskan judul skripsi, kendala yang dihadapi, atau permintaan khusus..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary btn-glow" style="width:100%; justify-content:center;">
+            🚀 Kirim Order & Buka Konsultasi WhatsApp
+          </button>
+          <div style="font-size:0.75rem; color:var(--text-muted); text-align:center;">
+            🔒 Data tersimpan aman & langsung diteruskan ke Admin SkripsiPro.
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
